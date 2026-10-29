@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Inside InceptionV3 · An animated explanation</title>
+<title>Inception V3 Architecture</title>
 <style>
 :root{--bg:#f5f3ec;--ink:#182b2c;--muted:#5a6968;--line:#d4dad3;--teal:#087e80;--orange:#b75325;--purple:#7759a6;--blue:#3269aa;--paper:#fffef9;--soft:#e3ede6}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}button,select{font:inherit}button,a,select{touch-action:manipulation}button{cursor:pointer}button:focus-visible,select:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--orange);outline-offset:4px}button:disabled{opacity:.35;cursor:default}button{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:7px;padding:10px 15px}button:hover:not(:disabled){background:var(--soft)}.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}.primary:hover:not(:disabled){background:var(--teal);color:var(--paper)}
@@ -34,7 +34,7 @@
 </head>
 <body>
 <div class="app">
-<header class="top"><div class="brand">Inside <span>InceptionV3</span></div><div class="tools"><label class="sr-only" for="chapters">Choose slide</label><select id="chapters"></select><button id="notes-toggle" aria-expanded="false">Teaching notes</button><button id="sources">Sources</button><button id="fullscreen">Full screen</button></div></header>
+<header class="top"><div class="brand"><span>Inception V3</span> Architecture</div><div class="tools"><label class="sr-only" for="chapters">Choose slide</label><select id="chapters"></select><button id="notes-toggle" aria-expanded="false">Teaching notes</button><button id="sources">Sources</button><button id="fullscreen">Full screen</button></div></header>
 <main class="slide"><div class="eyebrow" id="section"></div><h1 id="title"></h1><p class="sub" id="subtitle"></p><div class="visual" id="visual"></div><div id="quiz" hidden></div><div class="caption"><span class="step-label" id="step-label"></span><p id="caption" aria-live="polite"></p></div></main>
 <aside class="notes" id="notes" hidden><h2>Presenter prompt</h2><p id="note-content"></p></aside>
 <footer><div class="bottom"><div class="animation-controls"><button class="primary" id="play">Play animation</button><button id="step">Step</button><button id="replay">Replay</button><label class="sr-only" for="speed">Animation speed</label><select id="speed" aria-label="Animation speed"><option value="1600">Slow</option><option value="900" selected>Normal</option><option value="400">Fast</option></select></div><div class="slide-controls"><button id="prev" aria-label="Previous slide">← Back</button><span class="count" id="count"></span><button id="next">Next →</button></div></div><div class="progress"><span id="progress"></span></div><div class="hint">← → slides &nbsp; Space: one step &nbsp; P: play / pause &nbsp; R: replay &nbsp; F: full screen &nbsp; N: notes</div></footer>
